@@ -51,7 +51,8 @@ def bar_chart_countries(data,title,xaxis,yaxis):
 
 
 #plot the bar chart
-col1,col2 = st.beta_columns(2)
+col1,col2 = st.columns(2)
 col1.plotly_chart(bar_chart_countries(counrty_wise_confirmed_cases,title="Total Confirmed Cases",xaxis="Countries",yaxis="No. of people"))
 col2.plotly_chart(bar_chart_countries(counrty_wise_death_cases,title="Total Deaths",xaxis="Countries",yaxis="No. of people"))
 col1.plotly_chart(bar_chart_countries(counrty_wise_recovered_cases,title="Total Recoveries",xaxis="Countries",yaxis="No. of people"))
+st.write(f"Data may be null or differnet due to database update")
